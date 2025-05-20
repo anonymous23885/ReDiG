@@ -125,31 +125,29 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-<!--            Coordinated multi-robot navigation is a fundamental-->
-<!--            capability for robots to operate as a team in diverse environments.-->
-<!--            During navigation, robot teams usually need to maintain specific-->
-<!--            formations, such as circular formations in order to protect human-->
-<!--            teammates positioned at the center. However, in complex scenarios-->
-<!--            such as narrow corridors, rigidly preserving the predefined team-->
-<!--            formations can become infeasible. Therefore, robot teams must-->
-<!--            have the capability for dynamically splitting into smaller subteams-->
-<!--            and adaptively controlling the subteams to navigate through these-->
-<!--            complex scenarios while preserving suitable formations. In this-->
-<!--            paper, we introduce a novel method for <b>SubTeaming and Adaptive-->
-<!--            Formation (STAF)</b> to enable coordinated multi-robot navigation in-->
-<!--            complex and challenging scenarios. STAF is built upon a unified-->
-<!--            hierarchical learning framework that incorporates three levels of-->
-<!--            robot learning: (1) high-level deep graph cut for team splitting,-->
-<!--            (2) intermediate-level graph learning for facilitating coordinated-->
-<!--            navigation among subteams, and (3) low-level policy learning for-->
-<!--            controlling individual mobile robots to reach their goal positions-->
-<!--            while avoiding collisions. In order to evaluate and validate STAF,-->
-<!--            we conducted extensive experiments in both indoor and outdoor-->
-<!--            environments using robotics simulations and physical robot teams.-->
-<!--            Experimental results have demonstrated that STAF enables the-->
-<!--            novel capability for subteaming and adaptive formation control,-->
-<!--            and achieves promising performance in coordinated multi-robot-->
-<!--            navigation through complex and challenging scenarios.-->
+           Coordinated navigation is a fundamental capability for multi-robot teams to 
+           traverse complex unstructured environments. During navigation, robots are often 
+           required to maintain mission-specific formations, such as wedge formations for 
+           enhanced visibility and area coverage. However, rigid formations can hinder navigation 
+           in challenging scenarios like narrow corridors, which demand formation adaptation. 
+           Reinforcement learning (RL) is commonly used for coordinated multi-robot 
+           navigation due to its ability to learn through interaction with the environment. 
+           However, its step-wise decision-making process often results in jerky motion. 
+           In contrast, diffusion models generate smoother trajectories through probabilistic denoising, 
+           but rely heavily on high-quality demonstrations. 
+           Collecting such demonstrations is challenging in multi-robot systems 
+           due to the coordination and synchronization required among individual robots. 
+           To address these issues, we introduce a novel method named <i>Reinforced Diffusion on Graphs</i> (ReDiG) to enable 
+           decentralized coordinated multi-robot navigation with smooth formation adaptation. 
+           Under a unified learning framework, ReDiG integrates:
+           (1) graph learning for decentralized coordination to enable formation adaptation,
+           (2) diffusion models for generating smooth individual robot trajectories, and
+           (3) RL to refine noisy demonstrations by leveraging feedback from environment interaction, 
+           which enables robot synchronization and guides effective diffusion training.
+           We evaluate ReDiG through extensive experiments in both indoor and outdoor environments 
+           using physical robot teams and robotics simulations. 
+           Experimental results show that ReDiG enables smooth formation adaptation and achieves 
+           state-of-the-art performance in coordinated multi-robot navigation within complex unstructured environments.
           </p>
         </div>
       </div>
@@ -269,7 +267,7 @@
       <div class="column">
         <div class="content">
           <h3 class="title is-3 has-text-centered">Demonstration in Unity-based 3D multi-robot simulator
-            in ROS2</h3>
+            in ROS1</h3>
         </div>
       </div>
     </div>
@@ -348,7 +346,7 @@
       <div class="columns is-centered mb-6">
         <div class="column">
           <p class="mb-2">
-            We deploy ten Triton robots in the Gazebo simulations, and compare STAF with Leader and Follower method (L&F).
+<!--             We deploy ten Triton robots in the Gazebo simulations, and compare STAF with Leader and Follower method (L&F). -->
           </p>
           <div class="columns is-variable is-1">
             <div class="column">
